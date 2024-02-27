@@ -1,5 +1,5 @@
 ## Soccer API
-API that allow us manage live soccer and get history of matches. \
+API that allow us manage live and history soccer matches. \
 _Java version_: 21 \
 _Framework_: quarkus \
 _Database_: H2
