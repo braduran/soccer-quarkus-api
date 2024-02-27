@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "434f60e9-cfa4-4349-80c9-b97b21946121",
+		"name": "Quarkus soccer api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31006374"
+	},
+	"item": [
+		{
+			"name": "create match",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"local\": \"Argentina\",\n    \"visitor\": \"Brasil\",\n    \"stadium\": \"Mendoza\",\n    \"competition\": \"Mundial\",\n    \"attendeesNumber\": 20000,\n    \"date\": \"2024-09-01\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/match/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"match",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update match",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"local\": \"Barcelona\",\n    \"visitor\": \"Milan\",\n    \"date\": \"2024-04-01\",\n    \"localScore\": 1,\n    \"visitorScore\": 0,\n    \"minutes\": 20,\n    \"state\": \"IN_PROGRESS\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/match/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"match",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list matches",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/match/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"match",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "by state",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/match/state?state=END",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"match",
+						"state"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "END"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history matches team",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/match/team?team=Milan&page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"match",
+						"team"
+					],
+					"query": [
+						{
+							"key": "team",
+							"value": "Milan"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
