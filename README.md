@@ -1,10 +1,10 @@
 ## Soccer API
-API that allow us manage live soccer matches and get history of matches. \
+API that allow us manage live soccer and get history of matches. \
 _Java version_: 21 \
 _Framework_: quarkus \
 _Database_: H2
 
-It uses the next extensions:
+It uses the next quarkus extensions:
 - Hibernate ORM with Panache
 - H2 (Inmemory DB)
 - Hibernate Validator
@@ -13,7 +13,7 @@ It uses the next extensions:
 
 ### Running locally
 1. Clone repository
-2. Run application with command:
+2. Run application into cloned repository:
 * Windows
 > ./gradlew.bat quarkusDev
 * Linux
